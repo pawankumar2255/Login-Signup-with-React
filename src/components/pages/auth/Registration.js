@@ -39,7 +39,9 @@ const Registration = () => {
                 })
             }
 
-              nevigate('/dashboard')
+              setTimeout(()=>{
+                nevigate('/dashboard')
+              },1000)
         } else if (actualData.email && actualData.password && actualData.confirm_password && actualData.name && actualData.cb === null) {
             setError({
                 status: true,

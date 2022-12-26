@@ -25,7 +25,7 @@ const UserLogin = () => {
         type: "success"
       })
     setTimeout(()=>{
-      nevigate('/dashbaord')
+      nevigate('/dashboard')
     },2000)
     } else {
       setError({

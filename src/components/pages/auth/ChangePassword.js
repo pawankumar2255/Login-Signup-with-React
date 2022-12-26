@@ -1,5 +1,6 @@
 import { Alert, Box, Button, TextField } from '@mui/material'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const ChangePassword = () => {
     const [error, setError] = useState({
@@ -7,6 +8,7 @@ const ChangePassword = () => {
         message: "",
         type: ""
     })
+    const nevigate=useNavigate()
     const handleSubmit = (event) =>{
         event.preventDefault()
         const data = new FormData(event.currentTarget)
@@ -23,7 +25,9 @@ const ChangePassword = () => {
                     type : 'success'
                 })
                 console.log(actualData)
-            } else{
+                setTimeout(()=>{
+                    nevigate('/login')
+                })
                 setError({
                     status: true,
                     message: "Your new password and confirm new password does not matched",

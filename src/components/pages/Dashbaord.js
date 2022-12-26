@@ -8,7 +8,9 @@ const Dashbaord = () => {
     const handleLogout = ()=>{
         console.log(`You Logout Successfully `);
 
-        nevigate('/login')
+        setTimeout(()=>{
+            nevigate('/login')
+        })
     }
     return (
         <>
